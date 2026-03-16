@@ -1,0 +1,665 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family: Arial;
+margin:0;
+background:#f4f6fb;
+
+}
+
+
+/* NAVBAR */
+
+nav{
+
+display:flex;
+justify-content:space-between;
+background:#0f766e;
+padding:15px 40px;
+color:white;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:20px;
+
+}
+
+nav ul li a{
+
+color:white;
+text-decoration:none;
+
+}
+
+
+/* HERO */
+
+.hero{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding-top:120px;
+}
+
+/* gambar hero */
+
+.hero-img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+top:0;
+left:0;
+}
+
+/* overlay */
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+top:0;
+left:0;
+}
+
+/* tulisan hero */
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+color:white;
+max-width:900px;
+}
+
+/* judul estetik */
+
+.hero-content h1{
+font-family:"Playfair Display", serif;
+font-size:64px;
+letter-spacing:2px;
+margin-bottom:10px;
+text-shadow:0 4px 15px rgba(0,0,0,0.7);
+}
+
+/* subtitle */
+
+.hero-content p{
+font-family:"Poppins", sans-serif;
+font-size:22px;
+letter-spacing:1px;
+margin-bottom:35px;
+text-shadow:0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* tombol */
+
+.btn-anggota{
+display:inline-block;
+padding:12px 40px;
+border:2px solid white;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-family:"Poppins";
+font-size:18px;
+background:transparent;
+transition:0.3s;
+}
+
+.btn-anggota:hover{
+background:white;
+color:black;
+}
+
+/* SECTION */
+
+section{
+
+padding:60px 10%;
+
+}
+
+.title{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+
+/* CARD */
+
+.card-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+
+}
+
+.card img{
+
+width:100px;
+height:100px;
+border-radius:50%;
+
+}
+
+
+/* GALERI */
+
+.galeri{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.galeri img{
+
+width:100%;
+border-radius:10px;
+
+}
+
+
+/* WHATSAPP */
+
+.wa{
+
+display:inline-block;
+background:#25D366;
+padding:15px 25px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:20px;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+background:#0f766e;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#0f766e;
+  color:white;
+  position:relative;
+  z-index:10;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle{
+  display:flex;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  width:30px;
+  height:3px;
+  background:white;
+  margin:4px 0;
+  border-radius:2px;
+}
+
+/* MENU HIDDEN AWAL */
+.menu{
+  display:none;          /* awalnya tersembunyi */
+  flex-direction:column;
+  position:absolute;
+  right:20px;
+  top:60px;
+  background:#0f766e;
+  padding:20px;
+  border-radius:10px;
+  list-style:none;
+  z-index:9;
+}
+
+.menu li{
+  margin:10px 0;
+}
+
+.menu li a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
+  transition:0.2s;
+}
+
+.menu li a:hover{
+  color:#22c55e;
+}
+
+/* MENU AKTIF (muncul saat diklik) */
+.menu.active{
+  display:flex;
+}
+
+/* Jika ingin selalu di mobile, bisa pakai media query, tapi ini versi universal */
+
+/* PROFIL SECTION */
+.profil-section{
+  padding:80px 10%;
+  background: linear-gradient(to right, #0f766e, #22c55e);
+  color:white;
+  border-radius:20px;
+  margin:50px auto;
+}
+
+/* Container flex */
+.profil-container{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  max-width:1200px;
+  margin:auto;
+  flex-wrap:wrap; /* supaya responsive */
+}
+
+/* Foto Angkatan */
+.profil-image{
+  flex:1 1 45%; /* ambil 45% lebar container */
+  display:flex;
+  justify-content:center;
+}
+
+.profil-image img{
+  width:100%;
+  height:auto;
+  max-width:500px; /* foto lebih besar */
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  object-fit:cover;
+}
+
+/* Deskripsi */
+.profil-desc{
+  flex:1 1 50%; /* ambil 50% lebar container */
+}
+
+.profil-desc h2{
+  font-family:"Playfair Display", serif;
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.profil-desc p{
+  font-family:"Poppins", sans-serif;
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* RESPONSIVE MOBILE */
+@media(max-width:900px){
+  .profil-container{
+    flex-direction:column;
+    text-align:center;
+    gap:30px;
+  }
+
+  .profil-image img{
+    max-width:90%; /* agar tidak terlalu besar di HP */
+  }
+
+  .profil-desc h2{
+    font-size:28px;
+  }
+
+  .profil-desc p{
+    font-size:16px;
+  }
+}
+
+/* Card container */
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  padding:0 10%;
+}
+
+/* Card individual */
+.card{
+  background: linear-gradient(135deg, #22c55e, #0f766e); /* gradient keren */
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Foto anggota */
+.card-img{
+  background: rgba(255,255,255,0.2); /* transparan putih */
+  padding:15px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 15px auto;
+  width:120px;
+  height:120px;
+  overflow:hidden;
+}
+
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid white;
+}
+
+/* Nama & jabatan */
+.card h3{
+  color:white;
+  font-family:"Playfair Display", serif;
+  margin-bottom:5px;
+  font-size:20px;
+}
+
+.card p{
+  color:white;
+  font-family:"Poppins", sans-serif;
+  font-size:16px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .card-container{
+    gap:20px;
+    padding:0 5%;
+  }
+
+  .card{
+    padding:15px;
+  }
+
+  .card-img{
+    width:100px;
+    height:100px;
+  }
+}
+
+/* Judul Anggota Estetik */
+.title{
+  text-align:center;
+  font-family: "Playfair Display", serif;
+  font-size:42px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#a71e1e; /* hijau toska tegas */
+  margin-bottom:50px;
+  position:relative;
+}
+
+/* Hover efek (opsional) */
+.title:hover{
+  color:#16a34a;
+  transition:0.3s;
+}
+
+/* LIGHTBOX POPUP */
+.lightbox{
+  display:none;
+  position:fixed;
+  z-index:1000;
+  padding-top:60px;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background: rgba(0,0,0,0.9);
+}
+
+/* Lightbox Image */
+.lightbox-content{
+  margin:auto;
+  display:block;
+  width:80%;
+  max-width:800px;
+  border-radius:10px;
+  animation: zoom 0.3s;
+}
+
+/* Caption */
+#caption{
+  text-align:center;
+  color:white;
+  font-size:18px;
+  margin-top:10px;
+}
+
+/* Close button */
+.close{
+  position:absolute;
+  top:30px;
+  right:35px;
+  color:white;
+  font-size:40px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.close:hover{
+  color:#22c55e;
+}
+
+/* Zoom animation */
+@keyframes zoom{
+  from{transform:scale(0)}
+  to{transform:scale(1)}
+}
+
+/* Gallery container */
+.gallery-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:0 10%;
+}
+
+/* Gallery item */
+.gallery-item{
+  overflow:hidden;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  cursor:pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img{
+  transform: scale(1.05);
+}
+
+.gallery-item:hover{
+  box-shadow:0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* LIGHTBOX (sama seperti anggota) */
+#lightbox-galeri{
+  display:none;
+  position:fixed;
+  z-index:1000;
+  padding-top:60px;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background: rgba(0,0,0,0.9);
+}
+
+#lightbox-galeri .lightbox-content{
+  margin:auto;
+  display:block;
+  width:80%;
+  max-width:900px;
+  border-radius:10px;
+  animation: zoom 0.3s;
+}
+
+#caption-galeri{
+  text-align:center;
+  color:white;
+  font-size:18px;
+  margin-top:10px;
+}
+
+#lightbox-galeri .close{
+  position:absolute;
+  top:30px;
+  right:35px;
+  color:white;
+  font-size:40px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#lightbox-galeri .close:hover{
+  color:#22c55e;
+}
+
+/* Bagian Kontak */
+.kontak-section{
+  padding:80px 10%;
+  background: #f0fdf4; /* warna soft hijau */
+  border-radius:20px;
+  margin:50px auto;
+}
+
+/* WA Card mirip WhatsApp */
+.wa-card{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  max-width:500px;
+  margin:auto;
+  background:#dcf8c6; /* hijau muda WA */
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wa-card:hover{
+  transform: translateY(-5px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Foto Ketua */
+.wa-img img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #34af23;
+}
+
+/* Info Ketua */
+.wa-info h3{
+  margin:0;
+  font-family:"Playfair Display", serif;
+  font-size:22px;
+  color:#075e54; /* hijau gelap WA */
+}
+
+.wa-info p{
+  margin:2px 0 8px 0;
+  font-family:"Poppins", sans-serif;
+  font-size:16px;
+  color:#075e54;
+}
+
+/* Link WA */
+.wa-info a{
+  text-decoration:none;
+  background:#25d366; /* hijau WA */
+  color:white;
+  padding:8px 15px;
+  border-radius:25px;
+  font-family:"Poppins", sans-serif;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.wa-info a:hover{
+  background:#128c7e;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wa-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .wa-img img{
+    width:100px;
+    height:100px;
+  }
+}
